@@ -61,15 +61,16 @@ LOCAL_MODULE_SUFFIX 		:=
 LOCAL_MODULE_PATH			:= $(PRODUCT_OUT)/system/xbin/
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE				:= su
-LOCAL_MODULE_TAGS			:= optional eng
-LOCAL_MODULE_CLASS			:= EXECUTABLES
-LOCAL_SRC_FILES				:= xbin/su
-LOCAL_MODULE_FILENAME 		:= su
-LOCAL_MODULE_SUFFIX 		:= 
-LOCAL_MODULE_PATH			:= $(PRODUCT_OUT)/system/xbin/
-include $(BUILD_PREBUILT)
+# On CM11 SuperSU "su" binary needs to be copied manually to overwrite koush's version
+#include $(CLEAR_VARS)
+#LOCAL_MODULE				:= su
+#LOCAL_MODULE_TAGS			:= optional eng
+#LOCAL_MODULE_CLASS			:= EXECUTABLES
+#LOCAL_SRC_FILES				:= xbin/su
+#LOCAL_MODULE_FILENAME 		:= su
+#LOCAL_MODULE_SUFFIX 		:= 
+#LOCAL_MODULE_PATH			:= $(PRODUCT_OUT)/system/xbin/
+#include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE				:= sugote
